@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://bytecodevelocity.com/hrms"
+        xmlns:tns="http://bytecodevelocity.com/hrms"
+        elementFormDefault="qualified">
+
+    <element name="GetEmployeeRequest"
+             type="tns:GetEmployeeRequest"></element>
+
+    <element name="GetEmployeeResponse"
+             type="tns:GetEmployeeResponse">
+    </element>
+
+    <complexType name="GetEmployeeRequest">
+        <sequence>
+            <element name="employeeId" type="int"></element>
+        </sequence>
+    </complexType>
+
+    <complexType name="GetEmployeeResponse">
+        <sequence>
+            <element name="EmployeeDetails" type="tns:EmployeeDetails">
+            </element>
+        </sequence>
+    </complexType>
+
+    <element name="RemoveEmployeeRequest"
+             type="tns:RemoveEmployeeRequest">
+    </element>
+
+    <complexType name="RemoveEmployeeRequest">
+        <sequence>
+            <element name="employeeId" type="int"></element>
+        </sequence>
+    </complexType>
+
+    <complexType name="EmployeeDetails">
+        <sequence>
+            <element name="employeeId" type="int"></element>
+            <element name="employeeName" type="string"></element>
+            <element name="location" type="string"></element>
+            <element name="pincode" type="int"></element>
+        </sequence>
+    </complexType>
+
+    <element name="GetAllEmployeeRequest"
+             type="tns:GetAllEmployeeRequest">
+    </element>
+
+    <complexType name="GetAllEmployeeRequest">
+    </complexType>
+
+
+
+    <element name="GetAllEmployeeResponse"
+             type="tns:GetAllEmployeeResponse">
+    </element>
+
+    <complexType name="GetAllEmployeeResponse">
+        <sequence>
+            <element name="EmployeeDetails" type="tns:EmployeeDetails" maxOccurs="unbounded"></element>
+        </sequence>
+    </complexType>
+
+    <element name="RemoveEmployeeResponse"
+             type="tns:RemoveEmployeeResponse">
+    </element>
+
+    <complexType name="RemoveEmployeeResponse">
+        <sequence>
+            <element name="status" type="boolean"></element>
+        </sequence>
+    </complexType>
+</schema>

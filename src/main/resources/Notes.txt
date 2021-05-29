@@ -1,0 +1,27 @@
+1. XML - Request and Response
+2. WSDL - EndPoint
+3. XSD - Schema
+
+namespace - http://bytecodevelocity.com/hrms
+
+
+End POints
+=========
+GetEmployeeRequest as a Input
+GetEmployeeResponse as a Output
+
+// http://localhost:8080/soap/empservice
+
+method
+
+GetAllEmployeeRequest
+GetAllEmployeeResponse
+
+SECURITY
+
+Interceptor - XwsSecurityInterceptor
+            - callback -> set usename and password using SimplePassword Validation
+            - security policy
+
+add out interceptor to existing interceptor
+
